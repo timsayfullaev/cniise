@@ -1,0 +1,26 @@
+<svg width="1440" height="5796" viewBox="0 0 1440 5796" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1440" height="1932" fill="#FAFAFA"/>
+<rect y="240" width="72" height="72" fill="#083555"/>
+<rect x="1368" y="556" width="72" height="72" fill="#083555"/>
+<rect y="1582" width="72" height="72" fill="#083555"/>
+<rect y="696" width="72" height="72" fill="#00A0E3"/>
+<rect x="1368" y="1510" width="72" height="72" fill="#00A0E3"/>
+<rect opacity="0.2" x="1296" y="1582" width="72" height="72" fill="#989898"/>
+<rect opacity="0.2" x="72" y="308" width="72" height="72" fill="#989898"/>
+<rect width="1440" height="1932" transform="matrix(-1 0 0 -1 1440 3864)" fill="#FAFAFA"/>
+<rect x="1440" y="3624" width="72" height="72" transform="rotate(180 1440 3624)" fill="#083555"/>
+<rect x="72" y="3308" width="72" height="72" transform="rotate(180 72 3308)" fill="#083555"/>
+<rect x="1440" y="2282" width="72" height="72" transform="rotate(180 1440 2282)" fill="#083555"/>
+<rect x="1440" y="3168" width="72" height="72" transform="rotate(180 1440 3168)" fill="#00A0E3"/>
+<rect x="72" y="2354" width="72" height="72" transform="rotate(180 72 2354)" fill="#00A0E3"/>
+<rect opacity="0.2" x="144" y="2282" width="72" height="72" transform="rotate(180 144 2282)" fill="#989898"/>
+<rect opacity="0.2" x="1368" y="3556" width="72" height="72" transform="rotate(180 1368 3556)" fill="#989898"/>
+<rect width="1440" height="1932" transform="matrix(1 0 0 -1 0 5796)" fill="#FAFAFA"/>
+<rect width="72" height="72" transform="matrix(1 0 0 -1 0 5556)" fill="#083555"/>
+<rect width="72" height="72" transform="matrix(1 0 0 -1 1368 5240)" fill="#083555"/>
+<rect width="72" height="72" transform="matrix(1 0 0 -1 0 4214)" fill="#083555"/>
+<rect width="72" height="72" transform="matrix(1 0 0 -1 0 5100)" fill="#00A0E3"/>
+<rect width="72" height="72" transform="matrix(1 0 0 -1 1368 4286)" fill="#00A0E3"/>
+<rect opacity="0.2" width="72" height="72" transform="matrix(1 0 0 -1 1296 4214)" fill="#989898"/>
+<rect opacity="0.2" width="72" height="72" transform="matrix(1 0 0 -1 72 5488)" fill="#989898"/>
+</svg>
