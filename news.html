@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News</title>
+    <title>Main</title>
     <link rel="stylesheet" href="css/font.css" />
     <link rel="stylesheet" href="css/cniise-icons.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/micromodal.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
-  <body>
+  <body class="page">
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
@@ -27,7 +27,7 @@
                 <li><a href="#">Новости</a></li>
                 <li><a href="#">Контакты</a></li>
               </ul>
-              <button class="header__search">
+              <button class="header__search-button">
                 <i class="icon-magnifier"></i>
               </button>
             </nav>
@@ -36,6 +36,16 @@
               <span>Звонок бесплатный</span>
             </div>
           </div>
+        </div>
+        <div class="header__search">
+          <input
+            type="text"
+            class="header__search-input input"
+            placeholder="Поиск по сайту"
+          />
+          <button class="header__search-submit button">
+            <i class="icon-magnifier"></i>
+          </button>
         </div>
       </div>
     </header>
