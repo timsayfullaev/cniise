@@ -47,6 +47,45 @@ body
     margin: 0 auto
     position: relative
 
+.button
+    border-radius: 52px
+    padding: 16px 24px
+    font-weight: 600
+    text-decoration: none
+    transition: all .25s
+    cursor: pointer
+    border: none
+    background: $dark-blue
+    font-size: 20px
+    color: $white
+    &:hover
+        opacity: 0.9
+    &_light
+        font-size: 18px
+        background: $white
+        color: $dark-blue
+        &:hover
+            opacity: 0.94
+    &_submit
+        width: 100%
+        margin-top: 8px
+    &_callback
+        padding: 12px 32px
+        font-size: 16px
+
+.input
+    border: 1px solid rgba(152, 152, 152, 0.2)
+    border-radius: 6px
+    padding: 12px 18px
+    background: $page-bg
+    font-weight: 600
+    font-size: 16px
+    color: $dark-blue
+    width: 100%
+    &_textarea
+        height: 88px
+        resize: none
+
 .header
     padding: 16px 0
     background: $white
@@ -76,7 +115,7 @@ body
             transition: all .25s
             &:hover
                 color: $main-blue
-    &__search
+    &__search-button
         border: none
         background: none
         padding: 0
@@ -88,6 +127,8 @@ body
         i
             font-size: 20px
             line-height: 20px
+        &.active
+            color: $main-blue
     &__contact
         display: flex
         flex-direction: column
@@ -101,32 +142,37 @@ body
             font-weight: 400
             font-size: 13px
             color: $gray-text
-
-.button
-    border-radius: 52px
-    padding: 16px 24px
-    font-weight: 600
-    text-decoration: none
-    transition: all .25s
-    cursor: pointer
-    border: none
-    background: $dark-blue
-    font-size: 20px
-    color: $white
-    &:hover
-        opacity: 0.9
-    &_light
-        font-size: 18px
+    &__search
+        border-radius: 16px
+        padding: 16px
+        box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
         background: $white
-        color: $dark-blue
-        &:hover
-            opacity: 0.94
-    &_submit
-        width: 100%
-        margin-top: 8px
-    &_callback
-        padding: 12px 32px
-        font-size: 16px
+        display: flex
+        align-items: center
+        column-gap: 12px
+        position: absolute
+        right: 0
+        bottom: -118px
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-16px)
+        transition: 0.3s ease
+        &.active
+            opacity: 1
+            visibility: visible
+            transform: translateY(0)
+        &-input
+            width: 552px
+        &-submit
+            padding: 0
+            min-height: 50px
+            min-width: 50px
+            display: flex
+            justify-content: center
+            align-items: center
+            i
+                font-size: 20px
+                line-height: 20px
 
 .link
     display: flex
@@ -415,19 +461,6 @@ body
             margin-top: 52px
             .input
                 max-width: 240px
-
-.input
-    border: 1px solid rgba(152, 152, 152, 0.2)
-    border-radius: 6px
-    padding: 12px 18px
-    background: $page-bg
-    font-weight: 600
-    font-size: 16px
-    color: $dark-blue
-    width: 100%
-    &_textarea
-        height: 88px
-        resize: none
 
 .file
     &__title
@@ -1429,3 +1462,27 @@ body
                     font-weight: 900
                     font-size: 20px
                     color: $main-blue
+
+.modal
+    &__overlay
+        z-index: 10
+    &__container
+        border-radius: 16px
+        padding: 24px
+        min-width: 408px
+        box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
+        background: $white
+        position: relative
+    &__title
+        font-weight: 600
+        font-size: 18px
+        color: $black
+    &__close
+        position: absolute
+        top: 12px
+        right: 12px
+    &__content
+        margin: 0
+        margin-top: 20px
+    &__form
+        padding: 0

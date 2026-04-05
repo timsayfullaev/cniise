@@ -28,6 +28,19 @@ const swiperReviews = new Swiper(".reviews__slider", {
   grabCursor: true,
 });
 
+MicroModal.init({
+  awaitOpenAnimation: true,
+  awaitCloseAnimation: true,
+});
+
+const btn = document.querySelector(".header__search-button");
+const search = document.querySelector(".header__search");
+
+btn.addEventListener("click", () => {
+  btn.classList.toggle("active");
+  search.classList.toggle("active");
+});
+
 const input = document.querySelector(".file__input");
 const list = document.querySelector(".file__list");
 

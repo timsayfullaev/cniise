@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/font.css" />
     <link rel="stylesheet" href="css/cniise-icons.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/micromodal.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="page">
@@ -26,7 +27,7 @@
                 <li><a href="#">Новости</a></li>
                 <li><a href="#">Контакты</a></li>
               </ul>
-              <button class="header__search">
+              <button class="header__search-button">
                 <i class="icon-magnifier"></i>
               </button>
             </nav>
@@ -35,6 +36,16 @@
               <span>Звонок бесплатный</span>
             </div>
           </div>
+        </div>
+        <div class="header__search">
+          <input
+            type="text"
+            class="header__search-input input"
+            placeholder="Поиск по сайту"
+          />
+          <button class="header__search-submit button">
+            <i class="icon-magnifier"></i>
+          </button>
         </div>
       </div>
     </header>
@@ -841,10 +852,15 @@
         <div class="container">
           <div class="cta__flex">
             <div class="cta__text">
-              <h2>Нужена надёжная судебная экспертиза?</h2>
+              <h2>Нужна надёжная судебная экспертиза?</h2>
               <p>Обратитесь в ЦНИИСЭ уже сегодня!</p>
             </div>
-            <button class="button button_light">Связаться с нами</button>
+            <button
+              class="button button_light"
+              data-micromodal-trigger="modal-calculation"
+            >
+              Связаться с нами
+            </button>
           </div>
         </div>
       </section>
@@ -1061,7 +1077,74 @@
       </div>
     </footer>
 
+    <div
+      class="modal micromodal-slide"
+      id="modal-calculation"
+      aria-hidden="true"
+    >
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-calculation-title"
+        >
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-calculation-title">
+              Заявка на расчёт
+            </h2>
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            ></button>
+          </header>
+          <main class="modal__content" id="modal-calculation-content">
+            <form action="#" class="modal__form form">
+              <input
+                class="input"
+                type="text"
+                name="userName"
+                id="userName"
+                placeholder="Ваше имя"
+                required
+              />
+              <input
+                class="input"
+                type="tel"
+                name="userTel"
+                id="userTel"
+                placeholder="Номер телефона"
+                required
+              />
+              <textarea
+                class="input input_textarea"
+                name="userMessage"
+                id="userMessage"
+                placeholder="Опишите проблему"
+              ></textarea>
+              <div class="file">
+                <div class="file__title">
+                  <i class="icon-attach"></i>
+                  <span>Прикрепите документы по делу</span>
+                </div>
+                <label class="file__drop">
+                  <input type="file" class="file__input" multiple hidden />
+                  Выбрать файлы
+                </label>
+                <div class="file__list"></div>
+              </div>
+              <button class="button button_submit" type="submit">
+                Оставить заявку
+              </button>
+            </form>
+          </main>
+        </div>
+      </div>
+    </div>
+
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/micromodal.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
