@@ -57,6 +57,11 @@ body {
   margin: 0 auto;
   position: relative;
 }
+@media (max-width: 1240px) {
+  .container {
+    padding: 0 16px;
+  }
+}
 
 .button {
   border-radius: 52px;
@@ -120,11 +125,23 @@ body {
   -moz-column-gap: 60px;
        column-gap: 60px;
 }
+@media (max-width: 1200px) {
+  .header__inner {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+}
 .header__nav {
   display: flex;
   align-items: center;
   -moz-column-gap: 28px;
        column-gap: 28px;
+}
+@media (max-width: 1200px) {
+  .header__nav {
+    -moz-column-gap: 14px;
+         column-gap: 14px;
+  }
 }
 .header__list {
   display: flex;
@@ -133,6 +150,12 @@ body {
        column-gap: 28px;
   list-style-type: none;
   padding: 0;
+}
+@media (max-width: 1200px) {
+  .header__list {
+    -moz-column-gap: 14px;
+         column-gap: 14px;
+  }
 }
 .header__list a {
   font-weight: 500;
@@ -246,9 +269,19 @@ body {
 .promo_page {
   padding: 28px 0 109px 0;
 }
+@media (max-width: 1200px) {
+  .promo_page {
+    padding: 28px 0 168px 0;
+  }
+}
 .promo_page .promo__title {
   margin-top: 66px;
   max-width: 774px;
+}
+@media (max-width: 1200px) {
+  .promo_page .promo__title {
+    margin-top: 33px;
+  }
 }
 .promo_page .promo__text {
   font-size: 16px;
@@ -256,6 +289,11 @@ body {
 }
 .promo_page .promo__features {
   bottom: -109px;
+}
+@media (max-width: 1200px) {
+  .promo_page .promo__features {
+    bottom: -168px;
+  }
 }
 .promo__title {
   font-weight: 700;
@@ -284,6 +322,11 @@ body {
   right: 0;
   bottom: -77px;
   transform: translateY(50%);
+}
+@media (max-width: 1240px) {
+  .promo__features {
+    right: 16px;
+  }
 }
 .promo-card {
   border-radius: 12px;
@@ -526,6 +569,13 @@ body {
   -moz-column-gap: 52px;
        column-gap: 52px;
 }
+@media (max-width: 1200px) {
+  .cta__grid {
+    grid-template-columns: auto 408px;
+    -moz-column-gap: 26px;
+         column-gap: 26px;
+  }
+}
 .cta__flex {
   display: flex;
   align-items: center;
@@ -537,10 +587,21 @@ body {
   row-gap: 56px;
   justify-content: space-between;
 }
+@media (max-width: 1200px) {
+  .cta__wrapper {
+    row-gap: 28px;
+  }
+}
 .cta__wrapper i {
   font-size: 160px;
   line-height: 160px;
   color: #fff;
+}
+@media (max-width: 1200px) {
+  .cta__wrapper i {
+    font-size: 80px;
+    line-height: 80px;
+  }
 }
 .cta__text h2 {
   font-weight: 700;
@@ -576,6 +637,11 @@ body {
 }
 .form-callback_promo {
   margin-top: 52px;
+}
+@media (max-width: 1200px) {
+  .form-callback_promo {
+    margin-top: 26px;
+  }
 }
 .form-callback_promo .input {
   max-width: 240px;
@@ -688,6 +754,11 @@ body {
   grid-template-columns: 856px 320px;
   -moz-column-gap: 24px;
        column-gap: 24px;
+}
+@media (max-width: 1200px) {
+  .about__wrapper {
+    grid-template-columns: auto 320px;
+  }
 }
 .about__description {
   font-weight: 500;
@@ -1350,6 +1421,11 @@ body {
        column-gap: 24px;
   align-items: start;
 }
+@media (max-width: 1200px) {
+  .catalog__grid {
+    grid-template-columns: 320px auto;
+  }
+}
 .catalog__wrapper {
   margin-top: 10px;
 }
@@ -1358,6 +1434,11 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   margin-top: 24px;
+}
+@media (max-width: 1200px) {
+  .catalog__categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .catalog__categories-item {
   border-radius: 12px;
@@ -1420,6 +1501,11 @@ body {
   background: url("../img/bg.jpg") center center/cover no-repeat;
   border-radius: 16px;
   padding: 58px 40px;
+}
+@media (max-width: 1200px) {
+  .catalog__cta {
+    padding: 29px 20px;
+  }
 }
 .catalog__cta-flex {
   display: flex;
@@ -1576,6 +1662,11 @@ body {
        column-gap: 24px;
   align-items: start;
 }
+@media (max-width: 1200px) {
+  .search-results__grid {
+    grid-template-columns: 320px auto;
+  }
+}
 .search-results__wrapper {
   display: flex;
   flex-direction: column;
@@ -1624,6 +1715,11 @@ body {
   -moz-column-gap: 12px;
        column-gap: 12px;
   align-items: start;
+}
+@media (max-width: 1200px) {
+  .post__grid {
+    grid-template-columns: 392px auto;
+  }
 }
 .post__image {
   border-radius: 16px;
