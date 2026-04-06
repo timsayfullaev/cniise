@@ -239,10 +239,15 @@ body
 .promo
     background: url('../img/bg-hero.jpg') center center / cover no-repeat
     padding: 77px 0
+    @media ( max-width: 992px )
+        padding: 60px 0 168px 0
+        margin-bottom: 140px
     &_page
         padding: 28px 0 109px 0
         @media ( max-width: 1200px )
             padding: 28px 0 168px 0
+        @media ( max-width: 992px )
+            padding: 40px 0 168px 0
         .promo__title
             margin-top: 66px
             max-width: 774px
@@ -277,6 +282,11 @@ body
         right: 16px
         bottom: -77px
         transform: translateY(50%)
+        @media ( max-width: 992px )
+            left: 0
+            padding: 0 16px
+            bottom: -196px
+            right: auto
     &-card
         border-radius: 12px
         padding: 27px 20px
@@ -285,6 +295,9 @@ body
         box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
         background: $dark-blue
         text-align: center
+        @media ( max-width: 992px )
+            width: 100%
+            height: 223px
         &_accent
             background: $main-blue
         &__image
@@ -471,10 +484,17 @@ body
         @media ( max-width: 1200px )
             grid-template-columns: auto 408px
             column-gap: 26px
+        @media ( max-width: 992px )
+            grid-template-columns: 1fr
+            row-gap: 52px
     &__flex
         display: flex
         align-items: center
         justify-content: space-between
+        @media ( max-width: 992px )
+            flex-direction: column
+            row-gap: 52px
+            align-items: start
     &__wrapper
         display: flex
         flex-direction: column
@@ -516,6 +536,8 @@ body
         margin-top: 32px
         .input
             max-width: 280px
+            @media ( max-width: 992px )
+                max-width: 240px
         &_promo
             margin-top: 52px
             @media ( max-width: 1200px )
@@ -588,6 +610,9 @@ body
         display: grid
         grid-template-columns: repeat(4, 1fr)
         column-gap: 12px
+        @media ( max-width: 992px )
+            grid-template-columns: repeat(2, 1fr)
+            row-gap: 12px
     &__counter
         border-radius: 12px
         padding: 20px
@@ -615,6 +640,9 @@ body
         column-gap: 24px
         @media ( max-width: 1200px )
             grid-template-columns: auto 320px
+        @media ( max-width: 992px )
+            grid-template-columns: 1fr
+            row-gap: 24px
     &__description
         font-weight: 500
         font-size: 15px
@@ -631,6 +659,10 @@ body
         display: flex
         flex-direction: column
         row-gap: 32px
+        @media ( max-width: 992px )
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            column-gap: 12px
         img
             box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
 
@@ -656,6 +688,8 @@ body
         overflow: visible
         .swiper-slide
             width: 897px
+            @media ( max-width: 992px )
+                width: 100%
     &__item
         border-radius: 12px
         padding: 24px
@@ -842,6 +876,9 @@ body
         display: grid
         grid-template-columns: repeat(4, 1fr)
         column-gap: 12px
+        @media ( max-width: 992px )
+            grid-template-columns: repeat(2, 1fr)
+            row-gap: 12px
     &__item
         border-radius: 12px
         box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
@@ -850,6 +887,7 @@ body
             img
                 border-top-left-radius: 12px
                 border-top-right-radius: 12px
+                width: 100%
         &-body
             margin-top: 16px
             padding: 0 16px
@@ -932,8 +970,18 @@ body
     &__wrapper
         display: flex
         justify-content: space-between
+        @media ( max-width: 992px )
+            flex-direction: column
+    &__left
+        @media ( max-width: 992px )
+            display: flex
+            justify-content: space-between
     &__contacts
         margin-top: 24px
+        @media ( max-width: 992px )
+            margin-top: 0
+            display: flex
+            column-gap: 24px
     &__phone
         display: flex
         flex-direction: column
@@ -952,6 +1000,8 @@ body
         margin-top: 24px
         display: flex
         column-gap: 8px
+        @media ( max-width: 992px )
+            margin-top: 4px
         a
             color: $white
             font-size: 20px
@@ -961,6 +1011,9 @@ body
         display: flex
         flex-direction: column
         justify-content: space-between
+        @media ( max-width: 992px )
+            row-gap: 24px
+            align-items: start
     &__nav
         margin-top: 20px
         ul
@@ -984,6 +1037,8 @@ body
         display: flex
         flex-direction: column
         row-gap: 4px
+        @media ( max-width: 992px )
+            text-align: left
         a
             color: $white
             text-decoration: none
@@ -999,6 +1054,10 @@ body
         display: flex
         justify-content: space-between
         align-items: center
+        @media ( max-width: 992px )
+            flex-direction: column
+            align-items: start
+            row-gap: 24px
     &__copyright
         font-weight: 500
         font-size: 13px
@@ -1163,6 +1222,8 @@ body
         margin-top: 24px
         @media ( max-width: 1200px )
             grid-template-columns: repeat(2, 1fr)
+        @media ( max-width: 992px )
+            grid-template-columns: 1fr
         &-item
             border-radius: 12px
             padding: 16px
@@ -1220,6 +1281,10 @@ body
             display: flex
             align-items: center
             justify-content: space-between
+            @media ( max-width: 992px )
+                flex-direction: column
+                align-items: start
+                row-gap: 24px
         &-text
             h3
                 font-weight: 700
@@ -1388,8 +1453,13 @@ body
         align-items: start
         @media ( max-width: 1200px )
             grid-template-columns: 392px auto
+        @media ( max-width: 992px )
+            grid-template-columns: 1fr
+            row-gap: 12px
     &__image
         border-radius: 16px
+        @media ( max-width: 992px )
+            width: 100%
     &__card
         border-radius: 12px
         padding: 20px
@@ -1520,6 +1590,8 @@ body
             grid-template-columns: repeat(4, 1fr)
             gap: 12px
             margin-top: 16px
+            @media ( max-width: 992px )
+                grid-template-columns: repeat(3, 1fr)
             li
                 border-radius: 12px
                 padding: 16px

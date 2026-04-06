@@ -3,9 +3,17 @@ const swiperServices = new Swiper(".services__slider", {
     nextEl: ".services__arrow_next",
     prevEl: ".services__arrow_prev",
   },
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 12,
   grabCursor: true,
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 const swiperResults = new Swiper(".results__slider", {
@@ -23,9 +31,17 @@ const swiperReviews = new Swiper(".reviews__slider", {
     nextEl: ".reviews__arrow_next",
     prevEl: ".reviews__arrow_prev",
   },
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 12,
   grabCursor: true,
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 MicroModal.init({
