@@ -3,12 +3,13 @@ const swiperServices = new Swiper(".services__slider", {
     nextEl: ".services__arrow_next",
     prevEl: ".services__arrow_prev",
   },
-  slidesPerView: 1,
-  spaceBetween: 12,
+  slidesPerView: "auto",
+  spaceBetween: 8,
   grabCursor: true,
   breakpoints: {
     768: {
       slidesPerView: 2,
+      spaceBetween: 12,
     },
     992: {
       slidesPerView: 3,

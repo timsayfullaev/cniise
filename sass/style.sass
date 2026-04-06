@@ -52,7 +52,7 @@ body
 .button
     border-radius: 52px
     padding: 16px 24px
-    font-weight: 600
+    font-weight: 500
     text-decoration: none
     transition: all .25s
     cursor: pointer
@@ -60,12 +60,17 @@ body
     background: $dark-blue
     font-size: 20px
     color: $white
+    @media ( max-width: 576px )
+        padding: 12px 24px
+        font-size: 16px
     &:hover
         opacity: 0.9
     &_light
         font-size: 18px
         background: $white
         color: $dark-blue
+        @media ( max-width: 576px )
+            font-size: 16px
         &:hover
             opacity: 0.94
     &_submit
@@ -82,10 +87,12 @@ body
     border-radius: 6px
     padding: 12px 18px
     background: $page-bg
-    font-weight: 600
+    font-weight: 500
     font-size: 16px
     color: $dark-blue
     width: 100%
+    &::placeholder
+        color: $dark-blue
     &_textarea
         height: 88px
         resize: none
@@ -97,6 +104,11 @@ body
         display: flex
         align-items: center
         justify-content: space-between
+    &__logo
+        img
+            @media ( max-width: 576px )
+                height: 40px
+                width: auto
     &__inner
         display: flex
         align-items: center
@@ -105,12 +117,16 @@ body
             column-gap: 30px
         @media ( max-width: 992px )
             flex-direction: row-reverse
+        @media ( max-width: 576px )
+            column-gap: 20px
     &__nav
         display: flex
         align-items: center
         column-gap: 28px
         @media ( max-width: 1200px )
             column-gap: 14px
+        @media ( max-width: 576px )
+            column-gap: 8px
     &__list
         display: flex
         align-items: center
@@ -122,7 +138,7 @@ body
         @media ( max-width: 992px )
             display: none
         a
-            font-weight: 500
+            font-weight: 400
             font-size: 15px
             color: $black
             text-decoration: none
@@ -141,6 +157,9 @@ body
         i
             font-size: 20px
             line-height: 20px
+            @media ( max-width: 576px )
+                font-size: 18px
+                line-height: 18px
         &.active
             color: $main-blue
     &__menu-button
@@ -152,14 +171,18 @@ body
         flex-direction: column
         align-items: end
         a
-            font-weight: 600
+            font-weight: 500
             font-size: 18px
             color: $main-blue
             text-decoration: none
+            @media ( max-width: 576px )
+                font-size: 16px
         span
-            font-weight: 400
+            font-weight: 300
             font-size: 13px
             color: $gray-text
+            @media ( max-width: 576px )
+                font-size: 12px
     &__search
         border-radius: 16px
         padding: 16px
@@ -176,7 +199,10 @@ body
         transform: translateY(-16px)
         transition: 0.3s ease
         z-index: 10
-
+        @media ( max-width: 576px )
+            padding: 12px
+            left: 16px
+            bottom: -98px
         &.active
             opacity: 1
             visibility: visible
@@ -185,6 +211,8 @@ body
             width: 552px
             @media (max-width: 768px)
                 width: 450px
+            @media ( max-width: 576px )
+                width: 100%
         &-submit
             padding: 0
             min-height: 50px
@@ -207,6 +235,8 @@ body
         visibility: hidden
         transform: translateY(-16px)
         transition: 0.3s ease
+        @media ( max-width: 576px )
+            top: 66px
         &.active
             opacity: 1
             visibility: visible
@@ -219,7 +249,7 @@ body
             flex-direction: column
             row-gap: 8px
             a
-                font-weight: 500
+                font-weight: 400
                 font-size: 15px
                 color: $black
                 text-decoration: none
@@ -231,11 +261,16 @@ body
     text-decoration: none
     transition: all .25s
     span
-        font-weight: 600
+        font-weight: 500
         font-size: 18px
+        @media ( max-width: 576px )
+            font-size: 16px
     i
         font-size: 20px
         line-height: 20px
+        @media ( max-width: 576px )
+            font-size: 18px
+            line-height: 18px
     &_light
         color: $white
         &:hover
@@ -247,6 +282,10 @@ body
     @media ( max-width: 992px )
         padding: 60px 0 168px 0
         margin-bottom: 140px
+    @media ( max-width: 576px )
+        padding: 60px 0 108px 0
+        margin-bottom: 175px
+        background: url('../img/bg-hero.jpg') 33% center / cover no-repeat
     &_page
         padding: 28px 0 109px 0
         @media ( max-width: 1200px )
@@ -266,20 +305,27 @@ body
             @media ( max-width: 1200px )
                 bottom: -168px
     &__title
-        font-weight: 700
+        font-weight: 600
         font-size: 40px
         color: $white
-        max-width: 600px
+        max-width: 590px
+        @media ( max-width: 576px )
+            font-size: 24px
     &__text
-        font-weight: 600
+        font-weight: 500
         font-size: 20px
         color: $white
         margin-top: 8px
+        @media ( max-width: 576px )
+            font-size: 18px
     &__wrapper
         margin-top: 52px
         display: flex
         align-items: center
         column-gap: 40px
+        @media ( max-width: 576px )
+            justify-content: space-between
+            margin-top: 40px
     &__features
         display: flex
         column-gap: 8px
@@ -292,6 +338,8 @@ body
             padding: 0 16px
             bottom: -196px
             right: auto
+        @media ( max-width: 576px )
+            bottom: -172px
     &-card
         border-radius: 12px
         padding: 27px 20px
@@ -303,42 +351,55 @@ body
         @media ( max-width: 992px )
             width: 100%
             height: 223px
+        @media ( max-width: 576px )
+            padding: 12px
+            height: 221px
         &_accent
             background: $main-blue
         &__image
             margin: 0 auto
         &__place
-            font-weight: 900
+            font-weight: 800
             font-size: 80px
             color: $white
             line-height: 80px
             span
-                font-weight: 700
+                font-weight: 600
                 font-size: 18px
                 display: block
                 line-height: 18px
         &__title
-            font-weight: 600
+            font-weight: 500
             font-size: 17px
             text-align: center
             color: $white
             margin-top: 20px
+            @media ( max-width: 576px )
+                font-size: 15px
         &__text
-            font-weight: 500
+            font-weight: 400
             font-size: 14px
             text-align: center
             color: $white
             margin-top: 6px
+            @media ( max-width: 576px )
+                font-size: 13px
 
 .section
-    padding: 75px 0
+    padding: 75px 0 60px 0
+    @media ( max-width: 576px )
+        padding: 55px 0 40px 0
 
 .title
-    font-weight: 600
+    font-weight: 500
     color: $black
+    @media ( max-width: 576px )
+        font-size: 18px
     &_section
         font-size: 32px
         position: relative
+        @media ( max-width: 576px )
+            font-size: 24px
         &::before
             content: ''
             border-radius: 1px
@@ -348,8 +409,14 @@ body
             position: absolute
             top: -10px
             left: 0
+            @media ( max-width: 576px )
+                width: 40px
+                height: 4px
+                top: -8px
     &_medium
         font-size: 24px
+        @media ( max-width: 576px )
+            font-size: 20px
 
 .services
     overflow: hidden
@@ -358,6 +425,8 @@ body
         justify-content: space-between
         align-items: center
         margin-top: 40px
+        @media ( max-width: 576px )
+            margin-top: 24px
     &__controls
         display: flex
         align-items: center
@@ -368,12 +437,15 @@ body
         color: $dark-blue
         transition: all .25s
         cursor: pointer
+        @media ( max-width: 576px )
+            font-size: 18px
+            line-height: 18px
         &:hover
             opacity: 0.9
         &.swiper-button-disabled
             color: $gray-text
     &__all
-        font-weight: 600
+        font-weight: 500
         font-size: 15px
         color: $dark-blue
         display: flex
@@ -389,8 +461,14 @@ body
     &__slider
         margin-top: 12px
         overflow: visible
+        @media ( max-width: 576px )
+            margin-top: 8px
+            .swiper-slide
+                width: 90%
     &__other
         margin-top: 40px
+        @media ( max-width: 576px )
+            margin-top: 24px
     &__wrapper
         margin-top: 16px
         display: grid
@@ -399,12 +477,17 @@ body
         @media ( max-width: 768px )
             grid-template-columns: 1fr
             row-gap: 12px
+        @media ( max-width: 576px )
+            margin-top: 12px
+            row-gap: 8px
 
 .card
     border-radius: 12px
     padding: 20px
     box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
     background: $white
+    @media ( max-width: 576px )
+        padding: 16px
     &_horizontal
         display: flex
         align-items: center
@@ -413,27 +496,39 @@ body
             margin-top: 0
     &_about
         padding: 16px
+        @media ( max-width: 576px )
+            padding: 12px
     &__header
         display: flex
         align-items: center
         column-gap: 12px
+        @media ( max-width: 576px )
+            column-gap: 8px
         i
             font-size: 52px
             line-height: 52px
             color: $main-blue
+            @media ( max-width: 576px )
+                font-size: 44px
+                line-height: 44px
         &_about
             i
                 font-size: 32px
                 line-height: 32px
     &__title
-        font-weight: 600
+        font-weight: 500
         font-size: 18px
         color: $black
+        @media ( max-width: 576px )
+            font-size: 16px
     &__body
         border-radius: 12px
         padding: 20px
         background: $page-bg
         margin-top: 20px
+        @media ( max-width: 576px )
+            margin-top: 16px
+            padding: 16px
     &__list
         padding: 0
         list-style-type: none
@@ -449,10 +544,12 @@ body
                 span, i
                     color: $dark-blue
             span
-                font-weight: 500
+                font-weight: 400
                 font-size: 15px
                 color: $black
                 transition: all .25s
+                @media ( max-width: 576px )
+                    font-size: 14px
             i
                 font-size: 18px
                 line-height: 18px
@@ -460,8 +557,10 @@ body
                 transition: all .25s
     &__footer
         margin-top: 20px
+        @media ( max-width: 576px )
+            margin-top: 16px
     &__more
-        font-weight: 600
+        font-weight: 500
         font-size: 15px
         color: $dark-blue
         display: flex
@@ -469,22 +568,31 @@ body
         column-gap: 2px
         transition: all .25s
         text-decoration: none
+        @media ( max-width: 576px )
+            margin-top: 4px
         &:hover
             opacity: 0.9
         i
             font-size: 16px
             line-height: 16px
     &__text
-        font-weight: 500
+        font-weight: 400
         font-size: 14px
         color: $black
         margin-top: 16px
+        @media ( max-width: 576px )
+            font-size: 13px
+            margin-top: 8px
 
 .cta
     background: url('../img/bg.jpg') center center / cover no-repeat
     padding: 40px 0
+    @media ( max-width: 576px )
+        background: url('../img/bg.jpg') 22% center / cover no-repeat
     &_today
         padding: 80px 0
+        @media ( max-width: 576px )
+            padding: 40px 0
     &__grid
         display: grid
         grid-template-columns: 740px 408px
@@ -495,6 +603,8 @@ body
         @media ( max-width: 992px )
             grid-template-columns: 1fr
             row-gap: 52px
+        @media ( max-width: 576px )
+            row-gap: 40px
     &__flex
         display: flex
         align-items: center
@@ -503,6 +613,10 @@ body
             flex-direction: column
             row-gap: 52px
             align-items: start
+        @media ( max-width: 576px )
+            row-gap: 32px
+            .button
+                width: 100%
     &__wrapper
         display: flex
         flex-direction: column
@@ -510,6 +624,8 @@ body
         justify-content: space-between
         @media ( max-width: 1200px )
             row-gap: 28px
+        @media ( max-width: 576px )
+            row-gap: 8px
         i
             font-size: 160px
             line-height: 160px
@@ -517,16 +633,23 @@ body
             @media ( max-width: 1200px )
                 font-size: 80px
                 line-height: 80px
+            @media ( max-width: 576px )
+                font-size: 72px
+                line-height: 72px
     &__text
         h2
-            font-weight: 700
+            font-weight: 600
             font-size: 20px
             color: $white
+            @media ( max-width: 576px )
+                font-size: 16px
         p
-            font-weight: 700
+            font-weight: 600
             font-size: 36px
             color: $white
             margin-top: 8px
+            @media ( max-width: 576px )
+                font-size: 24px
 
 .form
     border-radius: 16px
@@ -536,6 +659,8 @@ body
     display: flex
     flex-direction: column
     row-gap: 12px
+    @media ( max-width: 576px )
+        padding: 20px
     &-callback
         display: flex
         align-items: center
@@ -545,6 +670,8 @@ body
         @media ( max-width: 768px )
             flex-direction: column
             row-gap: 16px
+        @media ( max-width: 576px )
+            row-gap: 8px
         .input
             max-width: 280px
             @media ( max-width: 992px )
@@ -562,7 +689,7 @@ body
 
 .file
     &__title
-        font-weight: 600
+        font-weight: 500
         font-size: 16px
         color: $dark-blue
         display: flex
@@ -576,7 +703,7 @@ body
         border-radius: 6px
         padding: 12px 18px
         background: $page-bg
-        font-weight: 600
+        font-weight: 500
         font-size: 16px
         color: $dark-blue
         width: 100%
@@ -603,7 +730,7 @@ body
         justify-content: space-between
         align-items: center
     &__name
-        font-weight: 500
+        font-weight: 400
         font-size: 14px
         color: $black
     &__remove
@@ -632,6 +759,9 @@ body
         @media ( max-width: 992px )
             grid-template-columns: repeat(2, 1fr)
             row-gap: 12px
+        @media ( max-width: 576px )
+            margin-top: 24px
+            gap: 8px
     &__counter
         border-radius: 12px
         padding: 20px
@@ -642,15 +772,19 @@ body
             .choice__counter-state, .choice__counter-text
                 color: $white
         &-state
-            font-weight: 900
+            font-weight: 800
             font-size: 60px
             text-align: center
             color: $main-blue
+            @media ( max-width: 576px )
+                font-size: 48px
         &-text
-            font-weight: 500
+            font-weight: 400
             font-size: 16px
             text-align: center
             color: $black
+            @media ( max-width: 576px )
+                font-size: 14px
 
 .about
     &__wrapper
@@ -663,10 +797,13 @@ body
             grid-template-columns: 1fr
             row-gap: 24px
     &__description
-        font-weight: 500
+        font-weight: 400
         font-size: 15px
         color: $black
         margin-top: 12px
+        @media ( max-width: 576px )
+            font-size: 14px
+            margin-top: 8px
     &__services
         margin-top: 40px
     &__items
@@ -674,6 +811,8 @@ body
         display: flex
         flex-direction: column
         row-gap: 12px
+        @media ( max-width: 576px )
+            row-gap: 8px
     &__images
         display: flex
         flex-direction: column
@@ -682,6 +821,12 @@ body
             display: grid
             grid-template-columns: repeat(2, 1fr)
             column-gap: 12px
+        @media ( max-width: 576px )
+            grid-template-columns: 1fr
+            row-gap: 8px
+            img:first-child
+                max-width: 220px
+                margin: 0 auto
         img
             box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
 
@@ -692,12 +837,18 @@ body
         justify-content: end
         column-gap: 4px
         margin-top: 4px
+        @media ( max-width: 576px )
+            justify-content: start
+            margin-top: 12px
     &__arrow
         font-size: 24px
         line-height: 24px
         color: $dark-blue
         transition: all .25s
         cursor: pointer
+        @media ( max-width: 576px )
+            font-size: 18px
+            line-height: 18px
         &:hover
             opacity: 0.9
         &.swiper-button-disabled
@@ -705,6 +856,8 @@ body
     &__slider
         margin-top: 12px
         overflow: visible
+        @media ( max-width: 576px )
+            margin-top: 8px
         .swiper-slide
             width: 897px
             @media ( max-width: 992px )
@@ -714,16 +867,24 @@ body
         padding: 24px
         box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
         background: $white
+        @media ( max-width: 576px )
+            padding: 16px
         &-header
             display: flex
             align-items: center
             justify-content: space-between
+            @media ( max-width: 576px )
+                flex-direction: column
+                align-items: start
+                row-gap: 2px
         &-title
-            font-weight: 600
+            font-weight: 500
             font-size: 20px
             color: $black
+            @media ( max-width: 576px )
+                font-size: 18px
         &-label
-            font-weight: 500
+            font-weight: 400
             font-size: 13px
             color: $gray-text
         &-body
@@ -734,23 +895,30 @@ body
             @media ( max-width: 768px )
                 grid-template-columns: 1fr
                 row-gap: 24px
+            @media ( max-width: 576px )
+                margin-top: 16px
+                row-gap: 8px
         &-task
             padding: 24px
+            @media ( max-width: 576px )
+                padding: 24px 16px
         &-solution
             border-radius: 12px
             padding: 24px 24px 16px
             background: $page-bg
+            @media ( max-width: 576px )
+                padding: 24px 16px 16px
         &-subtitle
-            font-weight: 600
+            font-weight: 500
             font-size: 16px
             color: $black
         &-content
-            font-weight: 500
+            font-weight: 400
             font-size: 14px
             color: $black
             margin-top: 6px
         &-more
-            font-weight: 500
+            font-weight: 400
             font-size: 14px
             color: $black
             display: -webkit-box
@@ -763,7 +931,7 @@ body
             border: none
             background: none
             padding: 0
-            font-weight: 600
+            font-weight: 500
             font-size: 15px
             color: $dark-blue
             display: flex
@@ -792,12 +960,17 @@ body
         justify-content: end
         column-gap: 4px
         margin-top: 4px
+        @media ( max-width: 576px )
+            justify-self: start
+            margin-top: 12px
     &__arrow
         font-size: 24px
         line-height: 24px
         color: $dark-blue
         transition: all .25s
         cursor: pointer
+        font-size: 18px
+        line-height: 18px
         &:hover
             opacity: 0.9
         &.swiper-button-disabled
@@ -810,16 +983,20 @@ body
         padding: 20px
         box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
         background: $white
+        @media ( max-width: 576px )
+            padding: 16px
         &-header
             display: flex
             align-items: center
             justify-content: space-between
         &-name
-            font-weight: 600
+            font-weight: 500
             font-size: 18px
             color: $black
+            @media ( max-width: 576px )
+                font-size: 16px
         &-company
-            font-weight: 500
+            font-weight: 400
             font-size: 13px
             color: $gray-text
         &-rating
@@ -829,9 +1006,9 @@ body
             i
                 font-size: 24px
                 line-height: 24px
-                color: #ffd600
+                color: #ffd500
             span
-                font-weight: 600
+                font-weight: 500
                 font-size: 15px
                 color: $black
         &-body
@@ -839,8 +1016,11 @@ body
             border-radius: 12px
             padding: 20px 20px 12px
             background: $page-bg
+            @media ( max-width: 576px )
+                padding: 16px 16px 8px
+                margin-top: 16px
         &-more
-            font-weight: 500
+            font-weight: 400
             font-size: 14px
             color: $black
             display: -webkit-box
@@ -852,7 +1032,7 @@ body
             border: none
             background: none
             padding: 0
-            font-weight: 600
+            font-weight: 500
             font-size: 15px
             color: $dark-blue
             display: flex
@@ -875,8 +1055,10 @@ body
                     transform: rotate(180deg)
         &-footer
             margin-top: 20px
+            @media ( max-width: 576px )
+                margin-top: 16px
         &-open
-            font-weight: 600
+            font-weight: 500
             font-size: 15px
             color: $dark-blue
             border: none
@@ -914,7 +1096,7 @@ body
             margin-top: 16px
             padding: 0 16px
         &-title
-            font-weight: 600
+            font-weight: 500
             font-size: 16px
             display: -webkit-box
             -webkit-line-clamp: 2
@@ -927,7 +1109,7 @@ body
                 &:hover
                     opacity: 0.9
         &-excerpt
-            font-weight: 500
+            font-weight: 400
             font-size: 14px
             color: $black
             margin-top: 8px
@@ -943,7 +1125,7 @@ body
             padding: 0 16px
             padding-bottom: 12px
             time
-                font-weight: 500
+                font-weight: 400
                 font-size: 13px
                 color: $gray-text
             a
@@ -963,6 +1145,10 @@ body
         margin-top: 16px
         @media ( max-width: 768px )
             grid-template-columns: repeat(2, 1fr)
+        @media ( max-width: 576px )
+            margin-top: 12px
+            grid-template-columns: 1fr
+            row-gap: 8px
     &__item
         border-radius: 12px
         padding: 20px
@@ -972,12 +1158,16 @@ body
             display: flex
             flex-direction: column
             justify-content: space-between
+        @media ( max-width: 576px )
+            padding: 12px
         &-name
-            font-weight: 600
+            font-weight: 500
             font-size: 17px
             color: $black
+            @media ( max-width: 576px )
+                font-size: 15px
         &-site
-            font-weight: 600
+            font-weight: 500
             font-size: 15px
             color: $dark-blue
             transition: all .25s
@@ -986,6 +1176,8 @@ body
             column-gap: 2px
             text-decoration: none
             margin-top: 12px
+            @media ( max-width: 576px )
+                margin-top: 4px
             &:hover
                 opacity: 0.9
             i
@@ -1010,26 +1202,37 @@ body
             margin-top: 0
             display: flex
             column-gap: 24px
+        @media ( max-width: 576px )
+            flex-direction: column
+            align-items: end
     &__phone
         display: flex
         flex-direction: column
+        @media ( max-width: 576px )
+            align-items: end
         a
-            font-weight: 600
+            font-weight: 500
             font-size: 18px
             color: $white
             text-decoration: none
+            @media ( max-width: 576px )
+                font-size: 16px
             &:hover
                 text-decoration: underline
         span
-            font-weight: 400
+            font-weight: 300
             font-size: 13px
             color: $white
+            @media ( max-width: 576px )
+                font-size: 12px
     &__social
         margin-top: 24px
         display: flex
         column-gap: 8px
         @media ( max-width: 992px )
             margin-top: 4px
+        @media ( max-width: 576px )
+            margin-top: 8px
         a
             color: $white
             font-size: 20px
@@ -1042,8 +1245,13 @@ body
         @media ( max-width: 992px )
             row-gap: 24px
             align-items: start
+        @media ( max-width: 576px )
+            margin-top: 24px
+            align-items: center
     &__nav
         margin-top: 20px
+        @media ( max-width: 576px )
+            margin-top: 0
         ul
             padding: 0
             list-style-type: none
@@ -1053,15 +1261,17 @@ body
             @media ( max-width: 768px )
                 flex-direction: column
                 row-gap: 8px
+            @media ( max-width: 576px )
+                align-items: center
         a
-            font-weight: 500
+            font-weight: 400
             font-size: 15px
             color: $white
             text-decoration: none
             &:hover
                 text-decoration: underline
     &__info
-        font-weight: 500
+        font-weight: 400
         font-size: 13px
         text-align: right
         color: $white
@@ -1070,6 +1280,9 @@ body
         row-gap: 4px
         @media ( max-width: 992px )
             text-align: left
+        @media ( max-width: 576px )
+            text-align: center
+            font-size: 11px
         a
             color: $white
             text-decoration: none
@@ -1080,6 +1293,8 @@ body
     &__line
         border: 1px solid rgba(255, 255, 255, 0.32)
         margin-top: 24px
+        @media ( max-width: 576px )
+            margin-top: 16px
     &__bottom
         margin-top: 24px
         display: flex
@@ -1089,20 +1304,29 @@ body
             flex-direction: column
             align-items: start
             row-gap: 24px
+        @media ( max-width: 576px )
+            margin-top: 16px
+            align-items: center
+            row-gap: 8px
     &__copyright
-        font-weight: 500
+        font-weight: 400
         font-size: 13px
         color: $white
         opacity: 0.8
+        @media ( max-width: 576px )
+            font-size: 11px
+            text-align: center
     &__links
         display: flex
         column-gap: 16px
         a
-            font-weight: 500
+            font-weight: 400
             font-size: 13px
             color: $white
             opacity: 0.8
             text-decoration: none
+            @media ( max-width: 576px )
+                font-size: 11px
             &:hover
                 text-decoration: underline
 
@@ -1126,10 +1350,10 @@ body
         flex-wrap: wrap
         li
             font-size: 12px
-            font-weight: 600
+            font-weight: 500
             color: $dark-blue
         a
-            font-weight: 500
+            font-weight: 400
             color: $gray-text
             text-decoration: none
             transition: all .25s
@@ -1145,13 +1369,13 @@ body
             li
                 font-size: 12px
                 color: $white
-                font-weight: 700
+                font-weight: 600
             a
-                font-weight: 500
+                font-weight: 400
                 color: $white
 
 .page-title
-    font-weight: 600
+    font-weight: 500
     font-size: 40px
     color: $black
     margin-top: 16px
@@ -1162,7 +1386,7 @@ body
     box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
     background: $white
     &__title
-        font-weight: 600
+        font-weight: 500
         font-size: 18px
         color: $black
 
@@ -1193,7 +1417,7 @@ body
         justify-content: space-between
         text-align: left
         width: 100%
-        font-weight: 600
+        font-weight: 500
         font-size: 14px
         color: $black
         cursor: pointer
@@ -1216,7 +1440,7 @@ body
                 display: flex
                 align-items: center
                 justify-content: space-between
-                font-weight: 500
+                font-weight: 400
                 font-size: 14px
                 color: $black
                 text-decoration: none
@@ -1233,7 +1457,7 @@ body
             border: 0
             padding: 0
             background: none
-            font-weight: 600
+            font-weight: 500
             font-size: 14px
             color: $dark-blue
             margin-top: 8px
@@ -1281,14 +1505,14 @@ body
                 line-height: 32px
                 color: $main-blue
             h3
-                font-weight: 600
+                font-weight: 500
                 font-size: 16px
                 color: $black
         &-link
             display: flex
             align-items: center
             column-gap: 2px
-            font-weight: 600
+            font-weight: 500
             font-size: 15px
             color: $dark-blue
             text-decoration: none
@@ -1300,12 +1524,12 @@ body
                 opacity: 0.9
     &__content
         h3
-            font-weight: 600
+            font-weight: 500
             font-size: 24px
             color: $black
             margin-top: 40px
         p
-            font-weight: 500
+            font-weight: 400
             font-size: 15px
             color: $black
             margin-top: 12px
@@ -1326,11 +1550,11 @@ body
                 row-gap: 24px
         &-text
             h3
-                font-weight: 700
+                font-weight: 600
                 font-size: 20px
                 color: $white
             p
-                font-weight: 700
+                font-weight: 600
                 font-size: 36px
                 color: $white
                 margin-top: 8px
@@ -1357,7 +1581,7 @@ body
             width: 44px
             height: 44px
             border-radius: 8px
-            font-weight: 600
+            font-weight: 500
             font-size: 16px
             color: $gray-text
             text-decoration: none
@@ -1388,11 +1612,11 @@ body
         row-gap: 20px
         &-phone
             div
-                font-weight: 500
+                font-weight: 400
                 font-size: 14px
                 color: $black
             a
-                font-weight: 700
+                font-weight: 600
                 font-size: 20px
                 color: $dark-blue
                 margin-top: 4px
@@ -1402,13 +1626,13 @@ body
                 &:hover
                     opacity: 0.9
             span
-                font-weight: 400
+                font-weight: 300
                 font-size: 13px
                 color: $gray-text
                 display: block
         &-info
             a
-                font-weight: 600
+                font-weight: 500
                 font-size: 15px
                 color: $black
                 text-decoration: none
@@ -1416,17 +1640,17 @@ body
                 &:hover
                     color: $dark-blue
             address
-                font-weight: 500
+                font-weight: 400
                 font-size: 13px
                 color: $gray-text
                 font-style: normal
                 margin-top: 2px
         &-about
-            font-weight: 600
+            font-weight: 500
             font-size: 12px
             color: $black
         &-details
-            font-weight: 500
+            font-weight: 400
             font-size: 13px
             color: $gray-text
             margin-top: 4px
@@ -1471,11 +1695,11 @@ body
         justify-content: space-between
         height: 80px
         &-title
-            font-weight: 600
+            font-weight: 500
             font-size: 16px
             color: $black
         &-link
-            font-weight: 600
+            font-weight: 500
             font-size: 15px
             color: $dark-blue
             display: flex
@@ -1511,16 +1735,16 @@ body
         box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
         background: $white
         &-title
-            font-weight: 700
+            font-weight: 600
             font-size: 28px
             color: $dark-blue
         &-content
-            font-weight: 500
+            font-weight: 400
             font-size: 14px
             color: $black
             margin-top: 8px
     &__info
-        font-weight: 500
+        font-weight: 400
         font-size: 13px
         color: $gray-text
         margin-top: 12px
@@ -1545,16 +1769,16 @@ body
         padding: 20px
         box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
         background: $white
-        font-weight: 600
+        font-weight: 500
         font-size: 16px
         color: $black
     &__content
-        font-weight: 500
+        font-weight: 400
         font-size: 15px
         color: $black
         margin-top: 32px
         h2
-            font-weight: 600
+            font-weight: 500
             font-size: 24px
             color: $black
         p
@@ -1579,19 +1803,19 @@ body
                     line-height: 24px
                     color: $main-blue
                 span
-                    font-weight: 500
+                    font-weight: 400
                     font-size: 14px
                     color: $black
 
 .primary
     padding-top: 43px
     &__content
-        font-weight: 500
+        font-weight: 400
         font-size: 15px
         color: $black
         margin-top: 32px
         h2
-            font-weight: 600
+            font-weight: 500
             font-size: 24px
             color: $black
         p
@@ -1616,15 +1840,15 @@ body
                     line-height: 24px
                     color: $main-blue
                 span
-                    font-weight: 500
+                    font-weight: 400
                     font-size: 14px
                     color: $black
                 h3
-                    font-weight: 600
+                    font-weight: 500
                     font-size: 15px
                     color: $black
                 p
-                    font-weight: 500
+                    font-weight: 400
                     font-size: 14px
                     color: $black
                     margin-top: 4px
@@ -1644,14 +1868,14 @@ body
                 padding: 16px
                 box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
                 background: $white
-                font-weight: 500
+                font-weight: 400
                 font-size: 14px
                 color: $black
                 display: flex
                 flex-direction: column
                 row-gap: 8px
                 span
-                    font-weight: 900
+                    font-weight: 800
                     font-size: 20px
                     color: $main-blue
 
@@ -1666,7 +1890,7 @@ body
         background: $white
         position: relative
     &__title
-        font-weight: 600
+        font-weight: 500
         font-size: 18px
         color: $black
     &__close
