@@ -2299,9 +2299,19 @@ body {
 .news {
   padding: 60px 0;
 }
-.news .materials__wrapper {
-  row-gap: 24px;
+.news__wrapper {
   margin-top: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  row-gap: 24px;
+}
+@media (max-width: 992px) {
+  .news__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 12px;
+  }
 }
 .news__pagination ul {
   padding: 0;

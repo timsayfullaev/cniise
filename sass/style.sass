@@ -1579,9 +1579,15 @@ body
 
 .news
     padding: 60px 0
-    .materials__wrapper
-        row-gap: 24px
+    &__wrapper
         margin-top: 0
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        column-gap: 12px
+        row-gap: 24px
+        @media ( max-width: 992px )
+            grid-template-columns: repeat(2, 1fr)
+            row-gap: 12px
     &__pagination
         ul
             padding: 0
