@@ -74,6 +74,8 @@ body
     &_callback
         padding: 12px 32px
         font-size: 16px
+        @media ( max-width: 768px )
+            width: 100%
 
 .input
     border: 1px solid rgba(152, 152, 152, 0.2)
@@ -167,19 +169,22 @@ body
         align-items: center
         column-gap: 12px
         position: absolute
-        right: 0
+        right: 16px
         bottom: -118px
         opacity: 0
         visibility: hidden
         transform: translateY(-16px)
         transition: 0.3s ease
         z-index: 10
+
         &.active
             opacity: 1
             visibility: visible
             transform: translateY(0)
         &-input
             width: 552px
+            @media (max-width: 768px)
+                width: 450px
         &-submit
             padding: 0
             min-height: 50px
@@ -391,6 +396,9 @@ body
         display: grid
         grid-template-columns: repeat(2, 1fr)
         column-gap: 12px
+        @media ( max-width: 768px )
+            grid-template-columns: 1fr
+            row-gap: 12px
 
 .card
     border-radius: 12px
@@ -534,16 +542,23 @@ body
         justify-content: start
         column-gap: 16px
         margin-top: 32px
+        @media ( max-width: 768px )
+            flex-direction: column
+            row-gap: 16px
         .input
             max-width: 280px
             @media ( max-width: 992px )
                 max-width: 240px
+            @media ( max-width: 768px )
+                max-width: 100%
         &_promo
             margin-top: 52px
             @media ( max-width: 1200px )
                 margin-top: 26px
             .input
                 max-width: 240px
+                @media ( max-width: 768px )
+                    max-width: 100%
 
 .file
     &__title
@@ -605,6 +620,10 @@ body
     &_service
         .choice__wrapper
             grid-template-columns: repeat(3, 1fr)
+            @media ( max-width: 768px )
+                grid-template-columns: repeat(2, 1fr)
+                .choice__counter:last-child
+                    grid-column: 1 / 3
     &__wrapper
         margin-top: 40px
         display: grid
@@ -712,6 +731,9 @@ body
             display: grid
             grid-template-columns: repeat(2, 1fr)
             column-gap: 24px
+            @media ( max-width: 768px )
+                grid-template-columns: 1fr
+                row-gap: 24px
         &-task
             padding: 24px
         &-solution
@@ -939,11 +961,17 @@ body
         grid-template-columns: repeat(3, 1fr)
         gap: 12px
         margin-top: 16px
+        @media ( max-width: 768px )
+            grid-template-columns: repeat(2, 1fr)
     &__item
         border-radius: 12px
         padding: 20px
         box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
         background: $white
+        @media ( max-width: 768px )
+            display: flex
+            flex-direction: column
+            justify-content: space-between
         &-name
             font-weight: 600
             font-size: 17px
@@ -1022,6 +1050,9 @@ body
             display: flex
             justify-content: end
             column-gap: 28px
+            @media ( max-width: 768px )
+                flex-direction: column
+                row-gap: 8px
         a
             font-weight: 500
             font-size: 15px
@@ -1081,6 +1112,10 @@ body
         display: flex
         align-items: end
         justify-content: space-between
+        @media ( max-width: 768px )
+            flex-direction: column
+            row-gap: 16px
+            align-items: start
 
 .breadcrumbs
     ol
@@ -1088,6 +1123,7 @@ body
         list-style-type: none
         display: flex
         column-gap: 4px
+        flex-wrap: wrap
         li
             font-size: 12px
             font-weight: 600
@@ -1213,6 +1249,9 @@ body
         align-items: start
         @media ( max-width: 1200px )
             grid-template-columns: 320px auto
+        @media ( max-width: 768px )
+            grid-template-columns: 1fr
+            row-gap: 24px
     &__wrapper
         margin-top: 10px
     &__categories
@@ -1336,6 +1375,9 @@ body
         display: grid
         grid-template-columns: repeat(2, 1fr)
         column-gap: 12px
+        @media ( max-width: 768px )
+            grid-template-columns: 1fr
+            row-gap: 12px
     &__card
         border-radius: 16px
         padding: 20px
@@ -1412,6 +1454,9 @@ body
         align-items: start
         @media ( max-width: 1200px )
             grid-template-columns: 320px auto
+        @media ( max-width: 768px )
+            grid-template-columns: 1fr
+            row-gap: 24px
     &__wrapper
         display: flex
         flex-direction: column
@@ -1592,6 +1637,8 @@ body
             margin-top: 16px
             @media ( max-width: 992px )
                 grid-template-columns: repeat(3, 1fr)
+            @media (max-width: 768px)
+                grid-template-columns: repeat(2, 1fr)
             li
                 border-radius: 12px
                 padding: 16px

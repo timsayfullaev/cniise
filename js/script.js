@@ -7,7 +7,7 @@ const swiperServices = new Swiper(".services__slider", {
   spaceBetween: 12,
   grabCursor: true,
   breakpoints: {
-    576: {
+    768: {
       slidesPerView: 2,
     },
     992: {
@@ -35,7 +35,7 @@ const swiperReviews = new Swiper(".reviews__slider", {
   spaceBetween: 12,
   grabCursor: true,
   breakpoints: {
-    576: {
+    768: {
       slidesPerView: 2,
     },
     992: {
