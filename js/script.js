@@ -41,6 +41,14 @@ btn.addEventListener("click", () => {
   search.classList.toggle("active");
 });
 
+const mobileBtn = document.querySelector(".header__menu-button");
+const mobileNav = document.querySelector(".header__mobile");
+
+mobileBtn.addEventListener("click", () => {
+  mobileBtn.classList.toggle("active");
+  mobileNav.classList.toggle("active");
+});
+
 const input = document.querySelector(".file__input");
 const list = document.querySelector(".file__list");
 

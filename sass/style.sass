@@ -46,8 +46,8 @@ body
     max-width: 1200px
     margin: 0 auto
     position: relative
-    @media (max-width: 1240px)
-        padding: 0 16px
+    padding: 0 16px
+    width: 100%
 
 .button
     border-radius: 52px
@@ -101,6 +101,8 @@ body
         column-gap: 60px
         @media ( max-width: 1200px )
             column-gap: 30px
+        @media ( max-width: 992px )
+            flex-direction: row-reverse
     &__nav
         display: flex
         align-items: center
@@ -115,6 +117,8 @@ body
         padding: 0
         @media ( max-width: 1200px )
             column-gap: 14px
+        @media ( max-width: 992px )
+            display: none
         a
             font-weight: 500
             font-size: 15px
@@ -123,7 +127,7 @@ body
             transition: all .25s
             &:hover
                 color: $main-blue
-    &__search-button
+    &__search-button, &__menu-button
         border: none
         background: none
         padding: 0
@@ -137,6 +141,10 @@ body
             line-height: 20px
         &.active
             color: $main-blue
+    &__menu-button
+        display: none
+        @media ( max-width: 992px )
+            display: block
     &__contact
         display: flex
         flex-direction: column
@@ -165,6 +173,7 @@ body
         visibility: hidden
         transform: translateY(-16px)
         transition: 0.3s ease
+        z-index: 10
         &.active
             opacity: 1
             visibility: visible
@@ -181,6 +190,34 @@ body
             i
                 font-size: 20px
                 line-height: 20px
+    &__mobile
+        border-radius: 16px
+        padding: 12px
+        box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)
+        background: $white
+        position: absolute
+        right: 16px
+        top: 84px
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-16px)
+        transition: 0.3s ease
+        &.active
+            opacity: 1
+            visibility: visible
+            transform: translateY(0)
+            z-index: 20
+        ul
+            list-style-type: none
+            padding: 0
+            display: flex
+            flex-direction: column
+            row-gap: 8px
+            a
+                font-weight: 500
+                font-size: 15px
+                color: $black
+                text-decoration: none
 
 .link
     display: flex
@@ -237,11 +274,9 @@ body
         display: flex
         column-gap: 8px
         position: absolute
-        right: 0
+        right: 16px
         bottom: -77px
         transform: translateY(50%)
-        @media (max-width: 1240px)
-            right: 16px
     &-card
         border-radius: 12px
         padding: 27px 20px
@@ -1503,7 +1538,7 @@ body
 
 .modal
     &__overlay
-        z-index: 10
+        z-index: 30
     &__container
         border-radius: 16px
         padding: 24px
