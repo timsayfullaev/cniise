@@ -45,6 +45,24 @@ const swiperReviews = new Swiper(".reviews__slider", {
   },
 });
 
+const swiperMaterials = new Swiper(".materials__slider", {
+  navigation: {
+    nextEl: ".materials__arrow_next",
+    prevEl: ".materials__arrow_prev",
+  },
+  slidesPerView: 1,
+  spaceBetween: 12,
+  grabCursor: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+  },
+});
+
 MicroModal.init({
   awaitOpenAnimation: true,
   awaitCloseAnimation: true,

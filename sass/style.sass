@@ -1075,14 +1075,30 @@ body
                 transform: rotate(180deg)
 
 .materials
-    &__wrapper
-        margin-top: 40px
-        display: grid
-        grid-template-columns: repeat(4, 1fr)
-        column-gap: 12px
-        @media ( max-width: 992px )
-            grid-template-columns: repeat(2, 1fr)
-            row-gap: 12px
+    overflow: hidden
+    &__controls
+        display: flex
+        justify-content: end
+        column-gap: 4px
+        margin-top: 4px
+        @media ( max-width: 576px )
+            justify-self: start
+            margin-top: 12px
+    &__arrow
+        font-size: 24px
+        line-height: 24px
+        color: $dark-blue
+        transition: all .25s
+        cursor: pointer
+        font-size: 18px
+        line-height: 18px
+        &:hover
+            opacity: 0.9
+        &.swiper-button-disabled
+            color: $gray-text
+    &__slider
+        margin-top: 12px
+        overflow: visible
     &__item
         border-radius: 12px
         box-shadow: 2px 2px 16px 0 rgba(4, 31, 51, 0.02)

@@ -1597,18 +1597,40 @@ body {
   transform: rotate(180deg);
 }
 
-.materials__wrapper {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+.materials {
+  overflow: hidden;
 }
-@media (max-width: 992px) {
-  .materials__wrapper {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 12px;
+.materials__controls {
+  display: flex;
+  justify-content: end;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  margin-top: 4px;
+}
+@media (max-width: 576px) {
+  .materials__controls {
+    justify-self: start;
+    margin-top: 12px;
   }
+}
+.materials__arrow {
+  font-size: 24px;
+  line-height: 24px;
+  color: #083555;
+  transition: all 0.25s;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 18px;
+}
+.materials__arrow:hover {
+  opacity: 0.9;
+}
+.materials__arrow.swiper-button-disabled {
+  color: #989898;
+}
+.materials__slider {
+  margin-top: 12px;
+  overflow: visible;
 }
 .materials__item {
   border-radius: 12px;
