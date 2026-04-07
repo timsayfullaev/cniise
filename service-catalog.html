@@ -66,13 +66,23 @@
     <main class="main">
       <section class="page-header">
         <div class="container">
-          <nav class="breadcrumbs">
-            <ol>
-              <li><a href="#">ЦНИИСЭ</a></li>
-              <li>Судебные экспертизы</li>
-            </ol>
-          </nav>
-          <h1 class="page-title">Судебные экспертизы</h1>
+          <div class="page-header__flex">
+            <div class="page-header__wrapper">
+              <nav class="breadcrumbs">
+                <ol>
+                  <li><a href="#">ЦНИИСЭ</a></li>
+                  <li>Судебные экспертизы</li>
+                </ol>
+              </nav>
+              <h1 class="page-title">Судебные экспертизы</h1>
+            </div>
+            <button
+              class="button button_callback"
+              data-micromodal-trigger="modal-calculation"
+            >
+              Получить консультацию
+            </button>
+          </div>
         </div>
       </section>
 
@@ -80,361 +90,379 @@
         <div class="container">
           <div class="catalog__grid">
             <aside class="aside">
-              <h3 class="aside__title">Все виды экспертиз</h3>
-              <div class="accordion">
-                <div class="accordion__item">
-                  <button class="accordion__header">
-                    <span
-                      >Негосударственная экспертиза проектно-сметной
-                      документации и результатов инженерных изысканий</span
-                    >
-                    <i class="icon-down-arrow"></i>
-                  </button>
-                  <div class="accordion__content">
-                    <ul class="accordion__list" data-limit="10">
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Налоговая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Финансово-экономическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Лингвистическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Почерковедческая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Психологическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Налоговая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Финансово-экономическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Лингвистическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Почерковедческая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Психологическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Налоговая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Финансово-экономическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Лингвистическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Почерковедческая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Психологическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                    <button class="accordion__list-toggle">Показать ещё</button>
+              <div class="aside__header">
+                <h3 class="aside__title">Все виды экспертиз</h3>
+                <i class="icon-down-arrow aside__icon"></i>
+              </div>
+              <div class="aside__body">
+                <div class="accordion">
+                  <div class="accordion__item">
+                    <button class="accordion__header">
+                      <span
+                        >Негосударственная экспертиза проектно-сметной
+                        документации и результатов инженерных изысканий</span
+                      >
+                      <i class="icon-down-arrow"></i>
+                    </button>
+                    <div class="accordion__content">
+                      <ul class="accordion__list" data-limit="10">
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Налоговая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Финансово-экономическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Лингвистическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Почерковедческая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Психологическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Налоговая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Финансово-экономическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Лингвистическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Почерковедческая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Психологическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Налоговая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Финансово-экономическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Лингвистическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Почерковедческая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Психологическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <button class="accordion__list-toggle">
+                        Показать ещё
+                      </button>
+                    </div>
                   </div>
-                </div>
-                <div class="accordion__item">
-                  <button class="accordion__header">
-                    <span>Криминалистические</span>
-                    <i class="icon-down-arrow"></i>
-                  </button>
-                  <div class="accordion__content">
-                    <ul class="accordion__list" data-limit="10">
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Налоговая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Финансово-экономическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Лингвистическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Почерковедческая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Психологическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                    <button class="accordion__list-toggle">Показать ещё</button>
+                  <div class="accordion__item">
+                    <button class="accordion__header">
+                      <span>Криминалистические</span>
+                      <i class="icon-down-arrow"></i>
+                    </button>
+                    <div class="accordion__content">
+                      <ul class="accordion__list" data-limit="10">
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Налоговая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Финансово-экономическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Лингвистическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Почерковедческая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Психологическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <button class="accordion__list-toggle">
+                        Показать ещё
+                      </button>
+                    </div>
                   </div>
-                </div>
-                <div class="accordion__item">
-                  <button class="accordion__header">
-                    <span>Медицинские и психофизиологические</span>
-                    <i class="icon-down-arrow"></i>
-                  </button>
-                  <div class="accordion__content">
-                    <ul class="accordion__list" data-limit="10">
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Налоговая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Финансово-экономическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Лингвистическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Почерковедческая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Психологическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                    <button class="accordion__list-toggle">Показать ещё</button>
+                  <div class="accordion__item">
+                    <button class="accordion__header">
+                      <span>Медицинские и психофизиологические</span>
+                      <i class="icon-down-arrow"></i>
+                    </button>
+                    <div class="accordion__content">
+                      <ul class="accordion__list" data-limit="10">
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Налоговая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Финансово-экономическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Лингвистическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Почерковедческая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Психологическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <button class="accordion__list-toggle">
+                        Показать ещё
+                      </button>
+                    </div>
                   </div>
-                </div>
-                <div class="accordion__item">
-                  <button class="accordion__header">
-                    <span>Экономические</span>
-                    <i class="icon-down-arrow"></i>
-                  </button>
-                  <div class="accordion__content">
-                    <ul class="accordion__list" data-limit="10">
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Налоговая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Финансово-экономическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Лингвистическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Почерковедческая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Психологическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                    <button class="accordion__list-toggle">Показать ещё</button>
+                  <div class="accordion__item">
+                    <button class="accordion__header">
+                      <span>Экономические</span>
+                      <i class="icon-down-arrow"></i>
+                    </button>
+                    <div class="accordion__content">
+                      <ul class="accordion__list" data-limit="10">
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Налоговая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Финансово-экономическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Лингвистическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Почерковедческая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Психологическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <button class="accordion__list-toggle">
+                        Показать ещё
+                      </button>
+                    </div>
                   </div>
-                </div>
-                <div class="accordion__item">
-                  <button class="accordion__header">
-                    <span>Инженерно-технические</span>
-                    <i class="icon-down-arrow"></i>
-                  </button>
-                  <div class="accordion__content">
-                    <ul class="accordion__list" data-limit="10">
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Налоговая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Финансово-экономическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Лингвистическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Почерковедческая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Психологическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                    <button class="accordion__list-toggle">Показать ещё</button>
+                  <div class="accordion__item">
+                    <button class="accordion__header">
+                      <span>Инженерно-технические</span>
+                      <i class="icon-down-arrow"></i>
+                    </button>
+                    <div class="accordion__content">
+                      <ul class="accordion__list" data-limit="10">
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Налоговая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Финансово-экономическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Лингвистическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Почерковедческая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Психологическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <button class="accordion__list-toggle">
+                        Показать ещё
+                      </button>
+                    </div>
                   </div>
-                </div>
-                <div class="accordion__item">
-                  <button class="accordion__header">
-                    <span>Инженерно-технологические</span>
-                    <i class="icon-down-arrow"></i>
-                  </button>
-                  <div class="accordion__content">
-                    <ul class="accordion__list" data-limit="10">
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Налоговая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Финансово-экономическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Лингвистическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Почерковедческая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Психологическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                    <button class="accordion__list-toggle">Показать ещё</button>
+                  <div class="accordion__item">
+                    <button class="accordion__header">
+                      <span>Инженерно-технологические</span>
+                      <i class="icon-down-arrow"></i>
+                    </button>
+                    <div class="accordion__content">
+                      <ul class="accordion__list" data-limit="10">
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Налоговая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Финансово-экономическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Лингвистическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Почерковедческая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Психологическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <button class="accordion__list-toggle">
+                        Показать ещё
+                      </button>
+                    </div>
                   </div>
-                </div>
-                <div class="accordion__item">
-                  <button class="accordion__header">
-                    <span>Оценочные (стоимостные)</span>
-                    <i class="icon-down-arrow"></i>
-                  </button>
-                  <div class="accordion__content">
-                    <ul class="accordion__list" data-limit="10">
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Налоговая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Финансово-экономическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Лингвистическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Почерковедческая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                      <li class="accordion__list-item">
-                        <a href="#">
-                          <span>Психологическая</span>
-                          <i class="icon-double-chevron-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                    <button class="accordion__list-toggle">Показать ещё</button>
+                  <div class="accordion__item">
+                    <button class="accordion__header">
+                      <span>Оценочные (стоимостные)</span>
+                      <i class="icon-down-arrow"></i>
+                    </button>
+                    <div class="accordion__content">
+                      <ul class="accordion__list" data-limit="10">
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Налоговая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Финансово-экономическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Лингвистическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Почерковедческая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                        <li class="accordion__list-item">
+                          <a href="#">
+                            <span>Психологическая</span>
+                            <i class="icon-double-chevron-right"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <button class="accordion__list-toggle">
+                        Показать ещё
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </aside>
-
             <div class="catalog__wrapper">
               <h2 class="title title_section">Основные виды экспертиз</h2>
               <div class="catalog__categories">
@@ -618,6 +646,120 @@
             <div class="choice__counter">
               <div class="choice__counter-state">12</div>
               <div class="choice__counter-text">Постоянных экспертов</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="results section">
+        <div class="container">
+          <h2 class="title title_section">Результаты нашей работы</h2>
+          <div class="results__controls">
+            <div class="results__arrow results__arrow_prev">
+              <i class="icon-left-arrow"></i>
+            </div>
+            <div class="results__arrow results__arrow_next">
+              <i class="icon-right-arrow"></i>
+            </div>
+          </div>
+          <div class="results__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="results__item">
+                  <div class="results__item-header">
+                    <h3 class="results__item-title">
+                      Проверка документов на соответствие почерку
+                    </h3>
+                    <div class="results__item-label">
+                      Почерковедческая экспертиза
+                    </div>
+                  </div>
+                  <div class="results__item-body">
+                    <div class="results__item-task">
+                      <div class="results__item-subtitle">Задача</div>
+                      <div class="results__item-content">
+                        <p>
+                          Далеко-далеко за словесными горами в стране гласных и
+                          согласных живут рыбные тексты. Решила знаках курсивных
+                          запятой по всей которой. Знаках сих повстречался себя
+                          речью пустился рукописи напоивший которое.
+                          Единственное но всеми своего живет.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="results__item-solution">
+                      <div class="results__item-subtitle">Решение</div>
+                      <div class="results__item-more">
+                        <p>
+                          Далеко-далеко за словесными горами в стране гласных и
+                          согласных живут рыбные тексты. Снова, которой дал.
+                          Меня точках на берегу, проектах наш маленькая запятой
+                          реторический это всеми. Большой себя великий
+                          безорфографичный снова раз домах?
+                          <br /><br />
+                          Далеко-далеко, за словесными горами в стране гласных и
+                          согласных живут рыбные тексты. Послушавшись подпоясал
+                          возвращайся все повстречался рот. Пояс предупреждал
+                          силуэт букв снова моей жизни рот продолжил что вопрос
+                          курсивных! Свой, послушавшись?
+                        </p>
+                      </div>
+                      <button class="results__item-toggle">
+                        <span>Развернуть</span>
+                        <i class="icon-down-arrow"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="results__item">
+                  <div class="results__item-header">
+                    <h3 class="results__item-title">
+                      Проверка документов на соответствие почерку
+                    </h3>
+                    <div class="results__item-label">
+                      Почерковедческая экспертиза
+                    </div>
+                  </div>
+                  <div class="results__item-body">
+                    <div class="results__item-task">
+                      <div class="results__item-subtitle">Задача</div>
+                      <div class="results__item-content">
+                        <p>
+                          Далеко-далеко за словесными горами в стране гласных и
+                          согласных живут рыбные тексты. Необходимыми своего
+                          семь свой, проектах его запятых ведущими то путь прямо
+                          своих скатился напоивший маленькая свою большой!
+                          Власти, дорогу буквенных.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="results__item-solution">
+                      <div class="results__item-subtitle">Решение</div>
+                      <div class="results__item-more">
+                        <p>
+                          Далеко-далеко за словесными горами в стране гласных и
+                          согласных живут рыбные тексты. Снова, которой дал.
+                          Меня точках на берегу, проектах наш маленькая запятой
+                          реторический это всеми. Большой себя великий
+                          безорфографичный снова раз домах?
+                          <br /><br />
+                          Далеко-далеко, за словесными горами в стране гласных и
+                          согласных живут рыбные тексты. Послушавшись подпоясал
+                          возвращайся все повстречался рот. Пояс предупреждал
+                          силуэт букв снова моей жизни рот продолжил что вопрос
+                          курсивных! Свой, послушавшись?
+                        </p>
+                      </div>
+                      <button class="results__item-toggle">
+                        <span>Развернуть</span>
+                        <i class="icon-down-arrow"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

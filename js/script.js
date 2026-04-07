@@ -58,7 +58,7 @@ const swiperMaterials = new Swiper(".materials__slider", {
       slidesPerView: 2,
     },
     992: {
-      slidesPerView: 3,
+      slidesPerView: 4,
     },
   },
 });
@@ -223,3 +223,14 @@ document.querySelectorAll(".accordion__list").forEach((list) => {
     accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
   });
 });
+
+const aside = document.querySelector(".aside");
+const header = document.querySelector(".aside__header");
+
+if (aside && header) {
+  header.addEventListener("click", () => {
+    if (window.innerWidth < 768) {
+      aside.classList.toggle("is-open");
+    }
+  });
+}
