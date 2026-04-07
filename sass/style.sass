@@ -292,11 +292,16 @@ body
             padding: 28px 0 168px 0
         @media ( max-width: 992px )
             padding: 40px 0 168px 0
+        @media ( max-width: 576px )
+            padding: 40px 0 100px 0
+            margin-bottom: 160px
         .promo__title
             margin-top: 66px
             max-width: 774px
             @media ( max-width: 1200px )
                 margin-top: 33px
+            @media ( max-width: 576px )
+                margin-top: 0
         .promo__text
             font-size: 16px
             max-width: 822px
@@ -304,6 +309,8 @@ body
             bottom: -109px
             @media ( max-width: 1200px )
                 bottom: -168px
+            @media ( max-width: 576px )
+                bottom: -150px
     &__title
         font-weight: 600
         font-size: 40px
@@ -682,6 +689,8 @@ body
             margin-top: 52px
             @media ( max-width: 1200px )
                 margin-top: 26px
+            @media ( max-width: 576px )
+                margin-top: 40px
             .input
                 max-width: 240px
                 @media ( max-width: 768px )
@@ -1896,15 +1905,23 @@ body
         font-weight: 500
         font-size: 16px
         color: $black
+        @media ( max-width: 576px )
+            padding: 16px
+            font-size: 15px
     &__content
         font-weight: 400
         font-size: 15px
         color: $black
         margin-top: 32px
+        @media ( max-width: 576px )
+            font-size: 14px
+            margin-top: 24px
         h2
             font-weight: 500
             font-size: 24px
             color: $black
+            @media ( max-width: 576px )
+                font-size: 20px
         p
             margin-top: 16px
         ul
@@ -1914,6 +1931,8 @@ body
             flex-direction: column
             row-gap: 12px
             margin-top: 16px
+            @media ( max-width: 576px )
+                row-gap: 8px
             li
                 border-radius: 12px
                 padding: 16px
@@ -1922,6 +1941,8 @@ body
                 display: flex
                 align-items: center
                 column-gap: 8px
+                @media ( max-width: 576px )
+                    padding: 12px
                 i
                     font-size: 24px
                     line-height: 24px
@@ -1930,18 +1951,26 @@ body
                     font-weight: 400
                     font-size: 14px
                     color: $black
+                    @media ( max-width: 576px )
+                        font-size: 13px
 
 .primary
     padding-top: 43px
+    @media ( max-width: 576px )
+        padding-top: 16px
     &__content
         font-weight: 400
         font-size: 15px
         color: $black
         margin-top: 32px
+        @media ( max-width: 576px )
+            margin-top: 24px
         h2
             font-weight: 500
             font-size: 24px
             color: $black
+            @media ( max-width: 576px )
+                font-size: 20px
         p
             margin-top: 16px
         ul
@@ -1951,6 +1980,8 @@ body
             flex-direction: column
             row-gap: 12px
             margin-top: 16px
+            @media ( max-width: 576px )
+                row-gap: 8px
             li
                 border-radius: 12px
                 padding: 16px
@@ -1959,6 +1990,8 @@ body
                 display: flex
                 align-items: center
                 column-gap: 8px
+                @media ( max-width: 576px )
+                    padding: 12px
                 i
                     font-size: 24px
                     line-height: 24px
@@ -1976,6 +2009,8 @@ body
                     font-size: 14px
                     color: $black
                     margin-top: 4px
+                    @media ( max-width: 576px )
+                        font-size: 13px
         ol
             list-style-type: none
             padding: 0
@@ -1987,6 +2022,8 @@ body
                 grid-template-columns: repeat(3, 1fr)
             @media (max-width: 768px)
                 grid-template-columns: repeat(2, 1fr)
+            @media ( max-width: 576px )
+                gap: 8px
             li
                 border-radius: 12px
                 padding: 16px
@@ -1998,6 +2035,11 @@ body
                 display: flex
                 flex-direction: column
                 row-gap: 8px
+                @media ( max-width: 576px )
+                    font-size: 13px
+                &:last-child
+                    @media ( max-width: 576px )
+                        grid-column: 1 / 3
                 span
                     font-weight: 800
                     font-size: 20px
